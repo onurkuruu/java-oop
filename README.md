@@ -1,18 +1,18 @@
 # Java ve OOP
-Bu başlık altında temel düzeyde OOP(Object Oriented Programming) notları ve Java ile kullanılım örnekleri yer almaktadır.
+Bu başlık altında temel düzeyde **OOP(Object Oriented Programming)** notları ve Java ile kullanılım örnekleri yer almaktadır.
 
 ### OOP
 OOP'nin anlamı nesneye dayalı programlamadır. Her şey nesneler üzerine kurulmuştur. Sınıfları ve nesneleri kullanarak programlar geliştirmemizi sağlayan bir metodolojidir. Bu yöntemi kullanarak uygulama geliştirmek; geliştirme ve bakım işlemlerini kolaylaştırır.
 
 OOP'nin temel kavramlarına bakacak olursak;
-* Inheritance (Kalıtım)
-* Polymorphism (Çok Biçimlilik)
-* Encapsulation (Sarmalama)
+* **Inheritance (Kalıtım)**
+* **Polymorphism (Çok Biçimlilik)**
+* **Encapsulation (Sarmalama)**
 
 ### Inheritance 
-Bir sınıfın başka bir sınıfın tüm özelliklerini almasıdır. Bu özellik kodun tekrar kullanılabilirliğini ve kalıtım alınan sınıf fonksiyonlarının yeniden yazılmasını (overriding) sağlar. Çalışma zamanında polymorphism işlemlerinin gerçekleşmesini sağlar.
+Bir sınıfın başka bir sınıfın tüm özelliklerini almasıdır. Bu özellik kodun tekrar kullanılabilirliğini ve kalıtım alınan sınıf fonksiyonlarının yeniden yazılmasını **(overriding)** sağlar. **Çalışma zamanında polymorphism** işlemlerinin gerçekleşmesini sağlar.
 
-Java da kalıtım IS-A ilişkisine dayalı olmalıdır. Örneğin kedi bir hayvandır gibi. Kedi sınıfı hayvan sınıfının özelliklerini kalıtım alır. Java’da kalıtım extends kelimesiyle sağlanır. 
+Java da kalıtım **IS-A** ilişkisine dayalı olmalıdır. Örneğin **kedi bir hayvandır** gibi. Kedi sınıfı hayvan sınıfının özelliklerini kalıtım alır. Java’da kalıtım **extends** kelimesiyle sağlanır.
 
 ```java
 class A{}
@@ -20,7 +20,8 @@ class A{}
 class B extends A{}
 ```
 
-Java multiple extends desteklemez bu diamond problemine yol acar. Yani iki sınıfta aynı isme, parametrelere ve dönüş tipine sahip bir fonksiyonumuz olsun. Kalıtım alan sınıftan bu fonksiyona ulaşmak istediğimizde hangi fonksiyonunun çalıştırılacağına karar verilemez.
+Java **multiple extends desteklemez** bu **diamond problemine** yol acar. Yani iki sınıfta aynı isme, parametrelere ve dönüş tipine sahip bir fonksiyonumuz olsun. Kalıtım alan sınıftan bu fonksiyona ulaşmak istediğimizde hangi fonksiyonunun çalıştırılacağına karar verilemez.
+
 ```java
 class A{
     public void run(){}
@@ -33,9 +34,9 @@ class B{
 class C extends A,B{}
 ```
 
-Çoklu kalıtım interface’ler yardımıyla sağlanabilir.
+Çoklu kalıtım interfaceler yardımıyla sağlanabilir.
 
-Kalıtıma benzer bir yaklaşımda HAS-A ilişkisidir. Yani ev sınıfı adres nesnesine sahiptir. Bu sayede adres nesnesinin özelliklerine ev sınıfı içerisinden ulaşılabilir. IS-A ilişkisinin kurulamadığı durumlarda kullanılması gerekir. Bu da kodun yeniden kullanılabilirliğini sağlar.
+Kalıtıma benzer bir yaklaşımda **HAS-A** ilişkisidir. Yani ev sınıfı adres nesnesine sahiptir. Bu sayede adres nesnesinin özelliklerine ev sınıfı içerisinden ulaşılabilir. **IS-A** ilişkisinin kurulamadığı durumlarda kullanılması gerekir. Bu da kodun yeniden kullanılabilirliğini sağlar.
 
 ```java
 class A{}
@@ -46,7 +47,7 @@ class B{
 ```
 
 ### Polymorphism 
-Bir görevin çalışma zamanında farklı yöntemlerle tamamlanabilmesini sağlar. Upcasting(tip değiştirme) kullanarak ve method overriding ya da method overloading yöntemleri ile sağlanır. Çok biçimlilik derleme zamanında ya da çalışma zamanında sağlanabilir. 
+Bir görevin çalışma zamanında farklı yöntemlerle tamamlanabilmesini sağlar. **Upcasting(tip değiştirme)** kullanarak ve **method overriding** ya da **method overloading** yöntemleri ile sağlanır. Çok biçimlilik derleme zamanında ya da çalışma zamanında sağlanabilir. 
 
 #### Çalışma Zamanı Polymorphism 
 Method overriding ile sağlanır.
@@ -141,7 +142,7 @@ class Test {
 
 
 ### Encapsulation
-Bir değişkeni ya da bir metodu sarmalayarak erişim kısıtı sağlanabilir. Erişim belirteçleri kullanılarak bir sınıfın read only ya da write only olması sağlanabilir. Verinin yönetimini sağlar.
+Bir değişkeni ya da bir metodu sarmalayarak erişim kısıtı sağlanabilir. Erişim belirteçleri kullanılarak bir sınıfın **read only** ya da **write only** olması sağlanabilir. Verinin yönetimini sağlar.
 
 ```java
 //Read only class
@@ -178,10 +179,10 @@ Java’da erişim belirteçleri yardımıyla da verilere erişimi kısıtlayabil
 
 Java erişim belirteçleri:
 
-* private: Metot ya da değişkenlere sadece aynı sınıf içerisinden erişime izin verir. Sınıf ve interfaceler private olamaz.
+* **private**: Metot ya da değişkenlere sadece aynı sınıf içerisinden erişime izin verir. Sınıf ve interfaceler private olamaz.
 
-* default: Varsayılan erişim belirtecidir. Sınıf, metot ya da değişkenin sadece paket içerisinde erişim sağlanabilir.
+* **default**: Varsayılan erişim belirtecidir. Sınıf, metot ya da değişkenin sadece paket içerisinde erişim sağlanabilir.
 
-* protected: Aynı paket içerisinden ve bu sınıftan türetilmiş alt sınıflar tarafından erişilmeyi sağlayan erişim belirleyicisi.
+* **protected**: Aynı paket içerisinden ve bu sınıftan türetilmiş alt sınıflar tarafından erişilmeyi sağlayan erişim belirleyicisi.
 
-* public: Her yerden erişim sağlanabilir.
+* **public**: Her yerden erişim sağlanabilir.
